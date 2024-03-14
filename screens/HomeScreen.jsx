@@ -7,7 +7,7 @@ export default function HomeScreen({ navigation}) {
       <Text>Bem vindo</Text>
       <Button
         onPress={()=>navigation.navigate("SobreScreen")}> 
-         Ir para sobre 
+         Ir para sobreee
       </Button>
     </View>
   );
