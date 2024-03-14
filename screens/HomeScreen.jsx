@@ -8,7 +8,7 @@ export default function HomeScreen({}) {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      {/* note que aqui estamos usando o TEXT de Native Paper*/}
+      {/* note que aqui estamos usando o TEXT de Native Papeer*/}
       {/* ele possui alguns props que podemos usar para melhorar a UI */}
       <Text variant="titleLarge">Inicial</Text>
       <Text variant="bodyMedium">Bem vindo</Text>
