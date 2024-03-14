@@ -8,7 +8,7 @@ export default function ProdutosScreen() {
   const [produtos, setProdutos] = useState([]);
 
   // aqui usamos o hook useEffect para ser executado
-  // toda vez que o componente de tela é montad
+  // toda vez que o componente de tela é montada
   useEffect(
     () => {
       // assim que temos a tela Produtos vamos buscar os
