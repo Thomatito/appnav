@@ -7,7 +7,7 @@ export default function ProdutosScreen() {
   const [produtos, setProdutos] = useState([]);
   const [categoria, setCategoria] = useState("");
   const [categorias, setCategorias] = useState([]);
- 
+
   const pegarCategorias = async () => {
     const categorias = await fetch("https://dummyjson.com/products/categories");
     const retorno = await categorias.json();
@@ -71,11 +71,25 @@ export default function ProdutosScreen() {
       <Text variant="titleLarge">Produtos</Text>
       <Text variant="bodyMedium">Confira a lista de produtos</Text>
       <ScrollView>
-        {categorias.map((cat) => (
-          <Button key={cat} onPress={() => setCategoria(cat)}>
-            {cat}
-          </Button>
-        ))}
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+          }}
+        >
+          {categorias.map((cat) => (
+            <Button
+              key={cat}
+              onPress={() => setCategoria(cat)}
+              mode="contained"
+            >
+              {cat}
+            </Button>
+          ))}
+
+          <Button onPress={() => setCategoria("")}>Limpar Filtros</Button>
+        </View>
 
         {
           // aqui criamos uma condicional dentro da exibição do componente

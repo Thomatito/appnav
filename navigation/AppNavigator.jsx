@@ -46,6 +46,14 @@ function TabNavigator() {
           tabBarIcon: "information",
         }}
       />
+      <Tab.Screen
+        name="TempoScreen"
+        component={TempoScreen}
+        options={{
+          title: "Tempo",
+          tabBarIcon: "weather-sunny",
+        }}
+      />
     </Tab.Navigator>
   );
 }
