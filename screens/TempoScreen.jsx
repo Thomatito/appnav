@@ -27,6 +27,7 @@ export default function TempoScreen() {
   }, []); 
   return (
     <View style={styles.container}>
+      
       <Text variant="bodyLarge">Tempo em {CITY_NAME}</Text>
       {tempoData && (
         <Card style={styles.card}>
