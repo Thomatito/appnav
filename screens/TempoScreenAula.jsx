@@ -4,18 +4,16 @@ import { View } from "react-native";
 import { Text } from "react-native-paper";
 import styles from "../config/styles";
 
-const API = "58f0cf79195fef97df91af42c5973568";
+
+const API = "fd404b4a4975d8e86f879073f5a4fe3a";
+const URL = `https://api.openweathermap.org/data/2.5/weather?q=Joinville&appid=${API}&units=metric`;
 
 export default function TempoScreenAula() {
   const [temperatura, setTemperatura] = useState("");
   const [icone, setIcone] = useState("");
-  const [cidade, setCidade] = useState("Joinville");
 
   const fetchTempo = async () => {
-
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API}&units=metric`;
     const resposta = await fetch(URL);
- 
     const data = await resposta.json();
     console.log(resposta); 
     console.log(data); 
@@ -27,7 +25,6 @@ export default function TempoScreenAula() {
     fetchTempo();
   }, []);
 
-
   return (
     <View style={styles.container}>
       {icone && (
@@ -36,7 +33,7 @@ export default function TempoScreenAula() {
             variant="displayMedium"
             style={{ textAlign: "center", marginVertical: 10 }}
           >
-            Temperatura em Itajaí
+            Temperatura em Joinville
           </Text>
           <Image
             source={{
